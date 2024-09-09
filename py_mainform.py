@@ -1,7 +1,6 @@
 #main form
 import tkinter as tk
 from tkinter import *
-
 w=1200
 h=650
 
@@ -9,13 +8,13 @@ class mainform:
     def __init__(self,master):
         self.master=master
 
-        #center form------#
+        #center form
         ws= self.master.winfo_screenwidth()
         hs= self.master.winfo_screenheight()
         x=(ws-w)/2
         y=(hs-h)/2
         self.master.geometry("%dx%d+%d+%d" % (w, h, x, y))
-        #------MENU------#
+        #MENU
         self.frame=tk.Frame(self.master)
         self.menubar=Menu(self.frame)
         self.products=Menu(self.menubar)
@@ -31,7 +30,6 @@ class mainform:
         self.categories.add_command(label="Remove")
 
         self.menubar.add_cascade(menu=self.categories,label="Category")
-
 
         self.frame.pack()
 
